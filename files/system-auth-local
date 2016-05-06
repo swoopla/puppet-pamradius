@@ -1,0 +1,18 @@
+#%PAM-1.0
+# ** managed by puppet - do not edit manually **
+auth        required      pam_env.so
+auth        sufficient    pam_radius_auth.so
+auth        sufficient    pam_unix.so nullok try_first_pass
+auth        required      pam_deny.so
+
+account     sufficient    pam_radius_auth.so
+account     required      pam_unix.so
+
+password    requisite     pam_cracklib.so try_first_pass retry=3 type=
+password    sufficient    pam_unix.so sha512 shadow nullok try_first_pass use_authtok
+password    required      pam_deny.so
+
+session     optional      pam_keyinit.so revoke
+session     required      pam_limits.so
+session     [success=1 default=ignore] pam_succeed_if.so service in crond quiet use_uid
+session     required      pam_unix.so
