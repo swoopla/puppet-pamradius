@@ -4,7 +4,7 @@
   "author": "techdad",
   "summary": "Configure PAM authentication via Radius",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/techdad/puppet-pamradius",
   "project_page": null,
   "issues_url": null,
   "dependencies": [
