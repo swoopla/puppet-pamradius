@@ -1,6 +1,6 @@
 {
   "name": "techdad-pamradius",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "techdad",
   "summary": "Configure PAM authentication via Radius",
   "license": "Apache-2.0",
