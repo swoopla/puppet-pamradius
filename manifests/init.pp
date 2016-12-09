@@ -5,6 +5,11 @@
 class pamradius {
 
 # package(s) needed
+# dependency repo
+package { 'epel-release':
+  ensure => 'installed',
+}
+# the actual package we need
 package { 'pam_radius':
   ensure => 'installed',
 }
