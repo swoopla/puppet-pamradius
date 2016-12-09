@@ -1,6 +1,23 @@
 # Class: pamradius
 # ===========================
 #
+# Parameters
+# ----------
+#
+# * `radius_servers`
+# Defines the array of one or more radius 
+# servers (IP or hostname) with their associated secrets.
+# 
+# Author
+# -------
+#
+# Daniel Shaw <daniel@techdad.xyz>
+#
+# License
+# -------
+#
+# Apache 2.0
+#
 
 class pamradius {
 
@@ -22,9 +39,6 @@ file { '/etc/pam_radius.conf':
   mode    => '0600',
   content => template('pamradius/pam_radius.conf.erb'),
 }
-
-#$radius_servers = [ { rad_server => '172.16.30.4', rad_secret => 'azerty' },
-#                    { rad_server => '192.168.1.2', rad_secret => 'qwerty' } ]
 
 # reference the module in local pam configs
 file { '/etc/pam.d/password-auth-local':

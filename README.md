@@ -7,14 +7,16 @@ A Puppet module for PAM Radius authentication.
 Usage:
 ------
 
-1. Set globally or locally:
+1. Must be set, globally or locally:
 	
 		$radius_servers = [ { rad_server => "172.16.30.4", rad_secret => "azerty" },
                     		{ rad_server => "192.168.1.2", rad_secret => "qwerty" } ]
                     		
-	This can list just one, or more radius servers with their secrets to auth agaist.
+	This can list just one, or multiple radius servers along with their secrets for PAM to authenticate agaist.
 	
-2. Just reference the module:
+	*NOTE: Set this variable in your site.pp or somewhere else such that it's available before the template is parsed.*
+	
+2. And then just reference the module:
 
 		include pamradius
 		
@@ -22,7 +24,6 @@ Usage:
 Compatability:
 --------------
 
-So far only tested on CentOS 6.x
+So far only tested on CentOS 6 (may possibly work elsewhere).
 
-Any other testing is most welcome.
-
+Additional testing is most welcome. If this works for you, please share.
