@@ -7,7 +7,7 @@ A Puppet module for PAM Radius authentication.
 Usage:
 ------
 
-1. Must be set, globally or locally:
+1. Must be set, globally for the site or locally (to a host):
 	
 		$radius_servers = [ { rad_server => "172.16.30.4", rad_secret => "azerty" },
                     		{ rad_server => "192.168.1.2", rad_secret => "qwerty" } ]
