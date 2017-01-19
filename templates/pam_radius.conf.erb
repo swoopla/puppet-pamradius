@@ -8,7 +8,7 @@
 #
 # server[:port]	shared_secret      timeout (s)
 <% @radius_servers.each do |rad_s| -%>
-<%= rad_s['rad_server'] %>    <%= rad_s['rad_secret'] %>    3
+<%= rad_s['rad_server'] %>    <%= rad_s['rad_secret'] %>    <%= @timeout %>
 <% end -%>
 
 # eof

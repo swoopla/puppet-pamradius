@@ -1,0 +1,7 @@
+Name: Radius Authentication
+Default: yes
+Priority: <%= @pam_priority %>
+Auth-Type: Primary
+Auth-Initial:
+Auth:
+         [success=end default=ignore]        pam_radius_auth.so try_first_pass
